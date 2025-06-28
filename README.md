@@ -1,4 +1,4 @@
-# 🚌 Anthil Networks - Bus Booking Backend API
+# 🚌 Anthil Networks - Bus Booking Backend API App
 
 This is the backend API for the **Anthil Networks Bus Booking System**, built using **Node.js**, **Express**, and **SQLite3**.  
 It supports features like **admin route & bus management**, **user bookings**, and **role-based authentication** using JWT.
@@ -111,9 +111,9 @@ AWS EC2 (cloud hosting)
 Postman (API testing)
 
 
-# ---------------------------------------------------------------------
+# -----------------------------------------------------------------------------------
 
-
+# 🚗Anthil Networks Second Hand Car Buying Frontend App
 🚗 Car Buying App – Second-hand Car Marketplace
 This is a web-based application that enables users to browse, request, and book second-hand cars. Admins can manage listings and requests through an admin dashboard.
 
