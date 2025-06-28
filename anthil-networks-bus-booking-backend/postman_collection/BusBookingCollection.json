@@ -1,0 +1,376 @@
+{
+  "info": {
+    "name": "Bus Booking System - Full API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register - Admin/User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/auth/register",
+          "host": [
+            "localhost:5000"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"password123\",\n  \"role\": \"admin\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Login - Admin/User",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/auth/login",
+          "host": [
+            "localhost:5000"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"password123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Add Bus",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/admin/bus",
+          "host": [
+            "localhost:5000"
+          ],
+          "path": [
+            "api",
+            "admin",
+            "bus"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"number\": \"KA1234\",\n  \"capacity\": 40,\n  \"type\": \"AC\",\n  \"amenities\": \"WiFi, Charging\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Get All Buses (Admin)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/admin/buses",
+          "host": [
+            "localhost:5000"
+          ],
+          "path": [
+            "api",
+            "admin",
+            "buses"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Bus",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/admin/bus/1",
+          "host": [
+            "localhost:5000"
+          ],
+          "path": [
+            "api",
+            "admin",
+            "bus",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"number\": \"KA9999\",\n  \"capacity\": 45,\n  \"type\": \"Non-AC\",\n  \"amenities\": \"Water Bottle\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Delete Bus",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/admin/bus/1",
+          "host": [
+            "localhost:5000"
+          ],
+          "path": [
+            "api",
+            "admin",
+            "bus",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Add Route",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/admin/route",
+          "host": [
+            "localhost:5000"
+          ],
+          "path": [
+            "api",
+            "admin",
+            "route"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"origin\": \"Bangalore\",\n  \"destination\": \"Mysore\",\n  \"travel_time\": \"3h\",\n  \"stops\": \"Ramnagara, Mandya\",\n  \"bus_id\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Update Route",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/admin/route/1",
+          "host": [
+            "localhost:5000"
+          ],
+          "path": [
+            "api",
+            "admin",
+            "route",
+            "1"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"origin\": \"Bangalore\",\n  \"destination\": \"Mysore\",\n  \"travel_time\": \"4h\",\n  \"stops\": \"Channapatna, Maddur\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Delete Route",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/admin/route/1",
+          "host": [
+            "localhost:5000"
+          ],
+          "path": [
+            "api",
+            "admin",
+            "route",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Buses (User)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/user/buses",
+          "host": [
+            "localhost:5000"
+          ],
+          "path": [
+            "api",
+            "user",
+            "buses"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Search Buses",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/user/search?origin=Bangalore&destination=Mysore",
+          "host": [
+            "localhost:5000"
+          ],
+          "path": [
+            "api",
+            "user",
+            "search?origin=Bangalore&destination=Mysore"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Book Bus",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/user/book",
+          "host": [
+            "localhost:5000"
+          ],
+          "path": [
+            "api",
+            "user",
+            "book"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"bus_id\": 1,\n  \"route_id\": 1,\n  \"seats_booked\": 2\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Cancel Booking",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/user/cancel/1",
+          "host": [
+            "localhost:5000"
+          ],
+          "path": [
+            "api",
+            "user",
+            "cancel",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
