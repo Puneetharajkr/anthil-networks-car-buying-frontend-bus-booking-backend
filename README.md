@@ -111,7 +111,7 @@ AWS EC2 (cloud hosting)
 Postman (API testing)
 
 
-# -----------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
 
 # 🚗Anthil Networks Second Hand Car Buying Frontend App
 🚗 Car Buying App – Second-hand Car Marketplace
